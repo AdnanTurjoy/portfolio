@@ -7,11 +7,17 @@ function Footer() {
   return (
     <div className="footer">
       <div className="socialMedia">
-        <GitHub />
-        <Facebook />
-        <LinkedIn />
+      <a href="https://github.com/AdnanTurjoy" target="_blank">
+            <GitHub />
+          </a>
+          <a href="https://facebook.com/adnan.turjoy.9" target="_blank">
+            <Facebook />
+          </a>
+          <a href="https://www.linkedin.com/in/adnan005/" target="_blank">
+          <LinkedIn />
+          </a>
       </div>
-      <p> &copy; 2022 pedrotech.com</p>
+      <p> &copy; 2022 adnan-porfolio.com</p>
     </div>
   );
 }

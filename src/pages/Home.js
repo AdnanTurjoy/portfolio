@@ -4,15 +4,40 @@ import React from "react";
 import "../styles/Home.css";
 
 function Home() {
+  // <Typical
+  //               loop={Infinity}
+  //               steps={[
+  //                 "Junior Web Developer",
+  //                 1500,
+  //                 "Front End Developer",
+  //                 1500,
+  //                 "Full Stack Developer",
+  //                 1500,
+  //                 "MERN Stack Developer",
+  //                 1500,
+  //                 "React Dev Developer",
+  //                 1500,
+  //               ]}
+  //             >
+
+  //             </Typical>
   return (
     <div className="home">
       <div className="about">
         <h2> Hi, My Name is Adnan</h2>
         <div className="prompt">
           <p>A software developer with a passion for learning and creating.</p>
-          <GitHub />
-          <Email />
+          <a href="https://github.com/AdnanTurjoy" target="_blank">
+            <GitHub />
+          </a>
+          <a href="mailto:adel.md.adnan@gmail.com" target="_blank">
+            <Email />
+          </a>
+          <a href="https://www.linkedin.com/in/adnan005/" target="_blank">
           <LinkedIn />
+          </a>
+
+          
         </div>
       </div>
       <div className="skills">
