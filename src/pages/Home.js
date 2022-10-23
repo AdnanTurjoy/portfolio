@@ -1,32 +1,31 @@
 import { Email, GitHub, LinkedIn } from "@mui/icons-material";
 import React from "react";
-
+import { Typewriter } from 'react-simple-typewriter'
 import "../styles/Home.css";
 
 function Home() {
-  // <Typical
-  //               loop={Infinity}
-  //               steps={[
-  //                 "Junior Web Developer",
-  //                 1500,
-  //                 "Front End Developer",
-  //                 1500,
-  //                 "Full Stack Developer",
-  //                 1500,
-  //                 "MERN Stack Developer",
-  //                 1500,
-  //                 "React Dev Developer",
-  //                 1500,
-  //               ]}
-  //             >
 
-  //             </Typical>
   return (
     <div className="home">
       <div className="about">
         <h2> Hi, My Name is Adnan</h2>
         <div className="prompt">
-          <p>A software developer with a passion for learning and creating.</p>
+        <p style={{ paddingTop: '3rem', margin: 'auto 0', fontWeight: 'normal' ,marginBottom:"10%"  }}>
+     
+        <span style={{ color: '#e9d35b', fontWeight: 'bold', }}>
+        
+          <Typewriter
+            words={['Front End Developer', 'React Developer', 'Junior Web Developer']}
+            loop={0}
+            cursor
+            cursorStyle='_'
+            typeSpeed={100}
+            deleteSpeed={70}
+            delaySpeed={1000}
+         
+          />
+        </span>
+        </p>
           <a href="https://github.com/AdnanTurjoy" target="_blank">
             <GitHub />
           </a>

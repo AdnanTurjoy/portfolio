@@ -9,6 +9,7 @@ function ProjectItem({ image, name, id }) {
       onClick={() => {
         navigate("/project/" + id);
       }}
+      data-aos="fade-up-right"
     >
       <div style={{ backgroundImage: `url(${image})` }} className="bgImage" />
       <h1> {name} </h1>
