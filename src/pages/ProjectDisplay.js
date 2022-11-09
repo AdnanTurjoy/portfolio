@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import "../styles/ProjectDisplay.css";
 import { ProjectList } from "../Data/ProjectList";
 import { GitHub } from "@mui/icons-material";
-
+import LaunchIcon from "@mui/icons-material/Launch";
 function ProjectDisplay() {
   const { id } = useParams();
   const project = ProjectList[id];
@@ -15,9 +15,15 @@ function ProjectDisplay() {
       <p>
         <b>Skills:</b> {project.skills}
       </p>
-      <a href={project.link} target="_blank">
-        <GitHub />
-      </a>
+      <div>
+        <a href={project.link} target="_blank" style={{ marginRight: "15px" }}>
+          <GitHub />
+        </a>
+        {"    "}
+        <a href={project.live} target="_blank">
+          <LaunchIcon />
+        </a>
+      </div>
     </div>
   );
 }
