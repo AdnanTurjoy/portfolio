@@ -9,7 +9,7 @@ function Admin(props) {
   const [skill, setSkill] = useState("");
   const [link, setLink] = useState("");
   const [live, setLive] = useState("");
-
+  const [projectUploadMessage, setprojectUploadMessage] = useState("");
   // axios.post("localhost:8000/api/project-list",{
   //     name,
   //     image,
@@ -44,7 +44,15 @@ function Admin(props) {
         }
       );
       if (data.success === true) {
-        console.log("uploaded");
+        setprojectUploadMessage("uploaded succesfully");
+        setTimeout(() => {
+          setprojectUploadMessage("");
+          setName("");
+          setLink("");
+          setSkill("");
+          setLive("");
+          setImage("");
+        }, 1000);
       }
     } catch (error) {
       console.log(error.message);
@@ -53,11 +61,12 @@ function Admin(props) {
   return (
     <div>
       {/* <form action="" encType="multipart/form-data" onSubmit={handleSubmit}> */}
-      <Box component="form">
+      <Box component="form" style={{ marginTop: "10px" }}>
         <TextField
           id="outlined-basic"
           label="project name"
           variant="outlined"
+          value={name}
           onChange={(e) => setName(e.target.value)}
         />
         <br />
@@ -68,7 +77,7 @@ function Admin(props) {
           name="image"
           onChange={handleImage}
         >
-          Upload File
+          Upload image
           <input type="file" hidden />
         </Button>
         <br />
@@ -77,6 +86,7 @@ function Admin(props) {
           id="outlined-basic"
           label="Skill, ...."
           variant="outlined"
+          value={skill}
           onChange={(e) => setSkill(e.target.value)}
         />
         <br />
@@ -85,6 +95,7 @@ function Admin(props) {
           id="outlined-basic"
           label="Github link"
           variant="outlined"
+          value={link}
           onChange={(e) => setLink(e.target.value)}
         />
         <br />
@@ -93,6 +104,7 @@ function Admin(props) {
           id="outlined-basic"
           label="live link"
           variant="outlined"
+          value={live}
           onChange={(e) => setLive(e.target.value)}
         />
         <br />
@@ -106,6 +118,7 @@ function Admin(props) {
         >
           Submit
         </Button>
+        <p>{projectUploadMessage}</p>
       </Box>
       {/* <label htmlFor="">Name</label>
         <input

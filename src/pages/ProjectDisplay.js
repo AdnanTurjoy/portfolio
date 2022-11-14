@@ -22,7 +22,7 @@ function ProjectDisplay() {
           <GitHub />
         </a>
         {"    "}
-        <a href={live} target="_blank">
+        <a href={live || "/"} target="_blank">
           <LaunchIcon />
         </a>
       </div>
