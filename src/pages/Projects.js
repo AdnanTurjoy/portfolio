@@ -1,19 +1,28 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect } from "react";
+import { useState } from "react";
 import ProjectItem from "../components/ProjectItem";
-import { ProjectList } from "../Data/ProjectList";
-
+//import { ProjectList } from "../Data/ProjectList";
 
 import "../styles/Projects.css";
 
 function Projects() {
+  const [projectList, setProjectList] = useState([]);
+  const getProject = async () => {
+    const projectList = await axios.get(
+      "http://localhost:8000/api/project-list"
+    );
+    setProjectList(projectList.data);
+  };
+  useEffect(() => {
+    getProject();
+  }, []);
   return (
     <div className="projects">
       <h1> My Personal Projects</h1>
       <div className="projectList">
-        {ProjectList.map((project, idx) => {
-          return (
-            <ProjectItem id={idx} name={project.name} image={project.image} />
-          );
+        {projectList.map((project, _id) => {
+          return <ProjectItem id={project._id} project={project} />;
         })}
       </div>
     </div>
