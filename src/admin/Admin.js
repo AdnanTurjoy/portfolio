@@ -34,7 +34,7 @@ function Admin(props) {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:8000/api/project-list",
+        "https://portfolio-adnan-160125.herokuapp.com/api/project-list",
         {
           name,
           image,

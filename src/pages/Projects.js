@@ -10,7 +10,7 @@ function Projects() {
   const [projectList, setProjectList] = useState([]);
   const getProject = async () => {
     const projectList = await axios.get(
-      process.env.REACT_APP_API_LINK + "/project-list"
+      "https://portfolio-adnan-160125.herokuapp.com/api/project-list"
     );
     setProjectList(projectList.data);
   };
