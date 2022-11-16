@@ -1,6 +1,6 @@
 .projects {
   
-    width: 80%;
+    width: 90%;
     height: auto;
     display: flex;
     justify-content: center;
@@ -11,6 +11,7 @@
     text-align: center;
     color: #3e497a;
     font-size: 60px;
+    margin-left: 30px;
     font-weight: bolder;
     margin: auto 0;
   }
