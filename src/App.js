@@ -1,18 +1,22 @@
-import "./App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
-import Projects from "./pages/Projects";
-import Experiance from "./pages/Experiance";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import ProjectDisplay from "./pages/ProjectDisplay";
 import { useEffect, useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { HashLoader } from "react-spinners";
 import Admin from "./admin/Admin";
+import "./App.css";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
+import Experiance from "./pages/Experiance";
+import Home from "./pages/Home";
+import ProjectDisplay from "./pages/ProjectDisplay";
+import Projects from "./pages/Projects";
 
 function App() {
   const [loading, setLoading] = useState(false);
   useEffect(() => {
+
+
+
+    
     setLoading(true);
     setTimeout(() => {
       setLoading(false);

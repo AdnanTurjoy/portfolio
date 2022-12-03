@@ -12,7 +12,7 @@ function Projects() {
   const getProject = async () => {
     setIsLoading(true);
     const projectList = await axios.get(
-      "https://portfolio-adnan-160125.herokuapp.com/api/project-list"
+      "https://adnan-porfolio-backend.up.railway.app/api/project-list"
     );
     setProjectList(projectList.data);
     setIsLoading(false);
@@ -31,9 +31,12 @@ function Projects() {
       )}
 
       <div className="projectList">
-        {projectList.map((project, _id) => {
-          return <ProjectItem id={project._id} project={project} />;
-        })}
+        {projectList
+          .slice(0)
+          .reverse()
+          .map((project, _id) => {
+            return <ProjectItem id={project._id} project={project} />;
+          })}
       </div>
     </div>
   );

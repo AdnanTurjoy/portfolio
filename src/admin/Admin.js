@@ -34,7 +34,7 @@ function Admin(props) {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "https://portfolio-adnan-160125.herokuapp.com/api/project-list",
+        "https://adnan-porfolio-backend.up.railway.app/api/project-list",
         {
           name,
           image,

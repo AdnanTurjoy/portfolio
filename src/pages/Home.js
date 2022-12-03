@@ -1,9 +1,10 @@
 import { Email, GitHub, LinkedIn } from "@mui/icons-material";
-import React from "react";
+import React, { useRef } from "react";
 import { Typewriter } from "react-simple-typewriter";
 import "../styles/Home.css";
 
 function Home() {
+  const ref = useRef();
   return (
     <div className="home">
       <div className="about">
