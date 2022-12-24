@@ -12,7 +12,7 @@ function Projects() {
   const getProject = async () => {
     setIsLoading(true);
     const projectList = await axios.get(
-      "https://adnan-porfolio-backend.up.railway.app/api/project-list"
+      "https://portfolio-backend-f3t3.onrender.com/api/project-list"
     );
     setProjectList(projectList.data);
     setIsLoading(false);

@@ -34,7 +34,7 @@ function Admin(props) {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "https://adnan-porfolio-backend.up.railway.app/api/project-list",
+        "https://portfolio-backend-f3t3.onrender.com/api/project-list",
         {
           name,
           image,
